@@ -1,0 +1,41 @@
+/* font-family: Kaushan Script */
+@font-face{
+    font-family: Kaushan;
+    src: url("../fonts/Kaushan_Script/KaushanScript-Regular.ttf");
+}
+
+/* font-family: 'Neucha' */
+@font-face{
+    font-family: Neucha;
+    src: url("../fonts/Neucha/Neucha-Regular.ttf");
+}
+
+/* font-family: openSans */
+@font-face{
+    font-family: openSans;
+    src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+
+/* font-family: Redressed */
+@font-face{
+    font-family: Redressed;
+    src: url("../fonts/Redressed/Redressed-Regular.ttf");
+}
+
+/* font-family: Satisfy */
+@font-face{
+    font-family: Satisfy;
+    src: url("../fonts/Satisfy/Satisfy-Regular.ttf");
+}
+
+/* font-family: Shadows_Into_Light */
+@font-face{
+    font-family: Shadows_Into_Light;
+    src: url("../fonts/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf");
+}
+
+/* font-family: Yellowtail */
+@font-face{
+    font-family: Yellowtail;
+    src: url("../fonts/Yellowtail/Yellowtail-Regular.ttf");
+}

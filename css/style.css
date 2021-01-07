@@ -1,0 +1,158 @@
+@import url("../css/fonts.css"); /* importing fonts stylesheet */
+
+/* removing browser default settings */
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;  /* hides all extra spacing from the x-axis */
+}
+
+/*-------variable creation-------*/
+:root{
+    /* theme colors */
+    --button-bg: #DDB892;
+    --button-text: #EDE0D4;
+
+    --bg-color: #9C6644;
+
+
+    --text-grey: #3f4954;
+    --text-light: #686666da;
+    
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /* theme font-family */
+    --Kaushan:"Kaushan", cursive;
+    --Neucha:"Neucha", cursive;
+    --openSans: "openSans", cursive;
+    --Redressed: "Redressed", cursive;
+    --Satisfy: "Satisfy", cursive;
+    --Shadows_Into_Light: "Shadows_Into_Light", cursive;
+    --Yellowtail: "Yellowtail", cursive;
+}
+/*----x---- variable creation---x-- */
+
+/*-------navigation bar -------*/
+.navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 10px 60px;
+    box-sizing: border-box;
+    position: fixed
+}
+
+/*-------contact details ------*/
+.contact-details span{
+    color: white;
+    font-size: 15px;
+}
+
+.contact-details .contact-no{
+    display: block;
+    margin-bottom: 5px;
+}
+/*----x---- contact details---x-- */
+
+/*-------logo ------*/
+.logo, .contact-details{
+    flex: 1;
+}
+
+.logo img{
+    width: 100px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+/*----x---- logo ---x-- */
+/*------- menu button ------*/
+.menu-toggler{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    z-index: 10;
+    font-family: var(--Neucha);
+    
+}
+
+.menu-toggler #menu-btn, .menu-toggler #menu-btn:focus{
+    background: none;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+/*----x---- menu button ---x-- */
+/*----x---- navigation bar ---x-- */
+
+/*------- bars on the left and right of site ------*/
+.sidebar, .sidebar-social{
+    width: 190px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    margin: auto;
+}
+/*----x---- bars on the left and right of site ---x-- */
+
+/*------- side bar menu ------*/
+.sidebar{
+    right: 0;
+    display: none;
+    background: var(--bg-color);
+}
+
+.sidebar-social{
+    left: 0;
+    width: 100px;
+}
+
+.sidebar-social .social-links{
+    display: flex;
+    transform: rotate(-90deg);
+    position: relative;
+    top: 60%;
+}
+
+.sidebar-social .social-links img{
+    padding-left: 20px;
+}
+
+.sidebar nav{
+    top: 40%;
+    position: relative;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.sidebar nav ol{
+    list-style: none;
+}
+
+.sidebar nav ol li{
+    text-transform: uppercase;
+    color: white;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-family: var(--Neucha);
+}
+
+.sidebar nav ol li a{
+    text-decoration: none;
+    color: white;
+}
+/*----x---- side bar menu ---x-- */
+
+main .landing-image{
+    background-image:url("https://images.unsplash.com/photo-1561912774-79769a0a0a7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
