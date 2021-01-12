@@ -11,14 +11,15 @@ html, body{
 /*-------variable creation-------*/
 :root{
     /* theme colors */
+    /* #E6CCB2 */
+    /* #7F5539 */
     --button-bg: #DDB892;
     --button-text: #EDE0D4;
 
     --bg-color: #9C6644;
 
 
-    --text-grey: #3f4954;
-    --text-light: #686666da;
+    --text-grey: #E6CCB2;
     
     --white: #ffffff;
     --midnight: #104f55;
@@ -34,6 +35,12 @@ html, body{
 }
 /*----x---- variable creation---x-- */
 
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
 /*-------navigation bar -------*/
 .navbar{
     width: 100%;
@@ -42,7 +49,8 @@ html, body{
     align-items: center;
     padding: 10px 60px;
     box-sizing: border-box;
-    position: fixed
+    position: fixed;
+        z-index: 1;
 }
 
 /*-------contact details ------*/
@@ -94,7 +102,7 @@ html, body{
 /*------- bars on the left and right of site ------*/
 .sidebar, .sidebar-social{
     width: 190px;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     top: 0;
     margin: auto;
@@ -106,22 +114,28 @@ html, body{
     right: 0;
     display: none;
     background: var(--bg-color);
+    z-index: 1;
 }
 
 .sidebar-social{
     left: 0;
     width: 100px;
+    z-index: 1;
 }
 
 .sidebar-social .social-links{
     display: flex;
     transform: rotate(-90deg);
     position: relative;
-    top: 60%;
+    top: 77%;
+    color: var(--text-grey);
+    text-transform: uppercase;
 }
 
-.sidebar-social .social-links img{
-    padding-left: 20px;
+.sidebar-social .social-links i{
+    padding: 0 5px 0 20px;
+    
+    
 }
 
 .sidebar nav{
@@ -149,10 +163,104 @@ html, body{
 }
 /*----x---- side bar menu ---x-- */
 
-main .landing-image{
+/*----x---- side bar menu ---x-- */
+.main-slider-container{
+    /* transform: translateY(-50%); */
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+}
+
+#slider{
+    display: inline-block;
+    transition: 0.5s;
+    width: 100%;
+}
+
+main #first-image{
     background-image:url("https://images.unsplash.com/photo-1561912774-79769a0a0a7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80");
+}
+main #second-image{
+    background-image:url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
+    
+}
+main #third-image{
+    background-image:url("https://images.unsplash.com/photo-1513623935135-c896b59073c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
+    
+}
+main #fourth-image{
+    background-image:url("https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80");
+    
+}
+
+main .landing-image{
     background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;
+    width:100vw;
 }
+
+.controller{
+    width: 1px;
+    height: 320px;
+    display: block;
+    background: #c0c0c0;
+    position: absolute;
+    top: 55%;
+    right: 50px;
+    transform: translateY(-50%);
+}
+
+#line1, #line2, #line3, #line4{
+    height: 80px;
+    width: 10px;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+
+#active{
+    width: 5px;
+    height: 80px;
+    border-radius: 10px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+/* tablets */
+@media screen and (max-width: 768px) {
+    .sidebar{
+        width: 100%;
+    }
+}
+
+/* small devices */
+@media screen and (max-width: 600px) {
+    .contact-details {
+      display: none;
+    }
+
+    .sidebar-social .social-links{
+        display: flex;
+        transform: rotate(0deg);
+        position: relative;
+        top: 90%;
+        left: 85%;
+        color: white
+        ;
+    }
+
+    .social-links span{
+        display: none;
+    }
+
+    
+
+    main .landing-image{
+        height: 99.6vh
+    }
+
+  }
