@@ -173,9 +173,9 @@ html, body{
 }
 
 #slider{
-    display: inline-block;
+    display: inline-flex;
     transition: 0.5s;
-    width: 100%;
+    /* width: 100%; */
     
 }
 
@@ -198,9 +198,14 @@ main #fourth-image{
 main .landing-image{
     background-size: cover;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    width:100vw;
+    width: 100vw;
+}
+
+main .landing-image .landing-image-text{
+    position: relative;
+    top: 50%;
+    left: 48%;
+    transform: translateY(-50%);
 }
 
 .controller{
@@ -250,7 +255,7 @@ main .landing-image{
         transform: rotate(0deg);
         position: relative;
         top: 90%;
-        left: 100%;
+        left: 75%;
         color: white
         ;
     }
@@ -263,6 +268,10 @@ main .landing-image{
 
     main .landing-image{
         height: 99.6vh
+    }
+
+    main .landing-image .landing-image-text{
+        left: 30%
     }
 
   }

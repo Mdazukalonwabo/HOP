@@ -17,14 +17,14 @@ $(document).ready(function(){
       active.style.top = '0px'
   }
   line2.onclick = function(){
-      slider.style.transform = 'translateX(-100%)';
+      slider.style.transform = 'translateX(-25%)';
       active.style.top = '80px'
   }
   line3.onclick = function(){
-      slider.style.transform = 'translateX(-200%)';
+      slider.style.transform = 'translateX(-50%)';
       active.style.top = '160px'
   }
   line4.onclick = function(){
-      slider.style.transform = 'translateX(-300%)';
+      slider.style.transform = 'translateX(-75%)';
       active.style.top = '240px'
   }
