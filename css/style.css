@@ -115,6 +115,7 @@ html, body{
     display: none;
     background: var(--bg-color);
     z-index: 1;
+    position: fixed;
 }
 
 .sidebar-social{
@@ -175,6 +176,7 @@ html, body{
     display: inline-block;
     transition: 0.5s;
     width: 100%;
+    
 }
 
 main #first-image{
@@ -239,7 +241,7 @@ main .landing-image{
 
 /* small devices */
 @media screen and (max-width: 600px) {
-    .contact-details {
+    .contact-details, .social-link-name{
       display: none;
     }
 
@@ -248,13 +250,13 @@ main .landing-image{
         transform: rotate(0deg);
         position: relative;
         top: 90%;
-        left: 85%;
+        left: 100%;
         color: white
         ;
     }
-
-    .social-links span{
-        display: none;
+    
+    .sidebar nav ol{  
+        padding-left: 0px;
     }
 
     
